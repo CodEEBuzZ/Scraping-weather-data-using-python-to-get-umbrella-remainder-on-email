@@ -15,6 +15,10 @@ Runs automatically in the background and checks weather every 30 minutes.
 
 Prevents duplicate spam emails by only sending one alert per weather condition.
 
+Fetches real-time weather data for **one or more cities**.
+
+Sends alerts via email or desktop notification.
+
 🛠️ Requirements
 
 Python 3.7+
@@ -33,7 +37,7 @@ cd umbrella-reminder
 
 Install dependencies
 
-pip install requests
+install the requirement.txt
 
 
 Set up Gmail App Password
