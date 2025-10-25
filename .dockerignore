@@ -1,0 +1,19 @@
+# Ignore virtual environments
+venv/
+*.venv/
+
+# Ignore .env files (NEVER build secrets into an image)
+.env
+*.env
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
+
+# Ignore Python cache
+__pycache__/
+*.pyc
