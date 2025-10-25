@@ -62,6 +62,40 @@ receiver_email = "receiver_email@gmail.com"
 api_key = "your_openweather_api_key"
 city = "Hyderabad"   # change to your city
 
+---
+
+🐳 Running with Docker
+
+You can also run this script as a background service using Docker, which is a great way to "set it and forget it."
+
+1.  **Build the Docker image:**
+    ```bash
+    docker build -t umbrella-reminder .
+    ```
+
+2.  **Run the container:**
+    Make sure your `.env` file is complete and in the same directory. This command mounts your `.env` file into the container securely and runs it.
+    ```bash
+    docker run -d --rm \
+      --env-file ./.env \
+      --name umbrella-service \
+      umbrella-reminder
+    ```
+    * `-d` runs the container in detached (background) mode.
+    * `--rm` automatically removes the container when it stops.
+    * `--env-file` securely passes your secrets to the container.
+    * `--name` gives your container an easy-to-find name.
+
+3.  **To see the logs:**
+    ```bash
+    docker logs -f umbrella-service
+    ```
+
+4.  **To stop the container:**
+    ```bash
+    docker stop umbrella-service
+    ```
+
 
 Run the script:
 
